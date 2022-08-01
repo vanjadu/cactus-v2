@@ -1,0 +1,68 @@
+@import '../../styles/variables'
+
+.navbar
+    position: fixed
+    top: 0
+    z-index: 10
+    width: 100%
+    height: 80px
+    padding: 0 5rem
+    background-color: $off-white
+    border-bottom: 1px solid #00000014
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @media only screen and (max-width: 920px)
+        padding: 0 2rem
+    &__left
+        display: flex
+        align-items: center
+    &__logo
+        width: 6rem
+    &__nav
+        margin-left: 1rem
+        @media only screen and (max-width: 920px)
+            display: none
+    &__link
+        margin: 0 .5rem
+        padding: 0.3rem 0
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            left: auto
+            background: $accent
+            width: 0
+            height: 1px
+            -webkit-transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1)
+            transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1)
+        &:hover::before
+            width: 100%
+            right: auto
+            left: 0
+    &__right
+        display: flex
+        align-items: center
+    &__r-link
+        display: flex
+        align-items: center
+        margin: 0 .5rem
+        &:hover
+            .navbar__icon
+                color: $accent
+        @media only screen and (max-width: 920px)
+            display: none
+    &__icon
+        font-size: 1.3rem
+        margin-right: .5rem
+    &__burger
+        margin: 0 .5rem
+        justify-content: center
+        align-items: center
+        display: none
+        @media only screen and (max-width: 920px)
+            display: flex
+    &__burger-icon
+        font-size: 2rem

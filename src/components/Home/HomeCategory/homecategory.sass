@@ -1,0 +1,80 @@
+@import '../../../styles/variables'
+
+.cat
+    width: 100%
+    min-height: 40vh
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 0 5rem
+    @media only screen and (max-width: 750px)
+        padding: 0 1.5rem
+    @media only screen and (max-width: 550px)
+        padding: 0 0.8rem
+    &__title
+        font-size: 3rem
+        color: $off-black
+        margin-bottom: 0.5rem
+        @media only screen and (max-width: 600px)
+            font-size: 2rem
+    &__desc
+        color: $off-black
+        opacity: 0.8
+        font-size: 1.2rem
+        @media only screen and (max-width: 600px)
+            font-size: 1rem
+    &__desc-link
+        color: $accent
+        cursor: pointer
+        margin-left: .5rem
+        font-size: 1.2rem
+        &:hover
+            color: darken($accent, 25%)
+    &__container
+        margin-top: 2rem
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        @media only screen and (max-width: 820px)
+            grid-template-columns: repeat(3, 1fr)
+        @media only screen and (max-width: 550px)
+            grid-template-columns: repeat(2, 1fr)
+    &__card
+        min-width: 150px
+        height: 150px
+        margin: 1rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 1rem
+        border-radius: $radius
+        background-color: lighten($accent, 21%)
+        position: relative
+        border: 1px solid transparent
+        &:nth-child(1),
+        &:nth-child(5)
+            margin-left: 0
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 8px
+            height: 70%
+            background-color: $accent
+            border-top-left-radius: $radius
+            border-bottom-left-radius: $radius
+        @media only screen and (max-width: 820px)
+            margin: 0.5rem
+    &__card-title
+        font-size: 1.5rem
+        font-weight: 600
+        margin-bottom: 0.5rem
+        color: $off-black
+        @media only screen and (max-width: 600px)
+            font-size: 1.2rem
+    &__card-desc
+        font-size: 1rem
+        color: $off-black
+        opacity: 0.8
