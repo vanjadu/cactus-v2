@@ -48,7 +48,7 @@ const HomeItems = (): JSX.Element => {
     <section className='hitems'>
       <div className='hitems__container'>
         {randomItems?.map((item: any, i: any) => (
-          <SingleItem key={i} link={item.id} {...item.data} />
+          <SingleItem key={i} identifier={item.id} {...item.data} />
         ))}
       </div>
     </section>

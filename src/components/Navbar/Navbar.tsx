@@ -28,7 +28,7 @@ const Navbar = ({ alterNav, setAlterNav }: NavbarProps): JSX.Element => {
             Naslovna
           </Link>
           <Link to='/products' className='navbar__link'>
-            Ponuda
+            Asortiman
           </Link>
           <Link to='/about' className='navbar__link'>
             O nama
