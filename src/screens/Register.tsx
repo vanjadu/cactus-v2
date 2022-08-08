@@ -3,8 +3,11 @@ import { motion } from 'framer-motion'
 import RegisterForm from '../components/Register/RegisterForm'
 import { UserContext } from '../context/UserContext'
 import ErrorPage from '../components/ErrorPage'
+import { TabTitle } from '../utils/NewTitle'
 
 const Register = (): JSX.Element => {
+  TabTitle('Cactus Gift Shop: Kreirajte nalog')
+
   const { user } = useContext(UserContext)
 
   return (

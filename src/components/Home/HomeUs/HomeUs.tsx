@@ -2,7 +2,7 @@ import React from 'react'
 import './homeus.sass'
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
-import usImage from '../../../assets/about.jpg'
+import usImage from '../../../assets/home/cactus_wrap.jpg'
 
 const WhyUs = (): JSX.Element => {
   return (

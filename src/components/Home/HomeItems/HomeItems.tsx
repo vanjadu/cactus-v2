@@ -45,13 +45,17 @@ const HomeItems = (): JSX.Element => {
   }
 
   return (
-    <section className='hitems'>
-      <div className='hitems__container'>
-        {randomItems?.map((item: any, i: any) => (
-          <SingleItem key={i} identifier={item.id} {...item.data} />
-        ))}
-      </div>
-    </section>
+    <>
+      {items && (
+        <section className='hitems'>
+          <div className='hitems__container'>
+            {randomItems?.map((item: any, i: any) => (
+              <SingleItem key={i} identifier={item.id} {...item.data} />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   )
 }
 

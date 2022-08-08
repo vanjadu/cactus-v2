@@ -3,8 +3,11 @@ import LoginForm from '../components/Login/LoginForm'
 import { motion } from 'framer-motion'
 import { UserContext } from '../context/UserContext'
 import ErrorPage from '../components/ErrorPage'
+import { TabTitle } from '../utils/NewTitle'
 
 const Login = (): JSX.Element => {
+  TabTitle('Cactus Gift Shop: Prijavite se')
+
   const { user } = useContext(UserContext)
 
   return (

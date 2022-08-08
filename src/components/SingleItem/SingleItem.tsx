@@ -1,6 +1,6 @@
 import React from 'react'
 import './singleitem.sass'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 interface SingleItemProps {
@@ -18,20 +18,25 @@ const SingleItem = ({
   price,
   category,
 }: SingleItemProps) => {
+  const navigate = useNavigate()
+
   return (
-    <div className='single'>
-      <div className='single__image-container'>
-        <img src={image} alt={name} className='single__image' />
-      </div>
-      <p className='single__cat'>{category}</p>
-      <Link to={`/products/${identifier}`}>
+    <Link to={`/products/${identifier}`}>
+      <div className='single'>
+        <div className='single__image-container'>
+          <img src={image} alt={name} className='single__image' />
+        </div>
+        <p className='single__cat'>{category}</p>
         <h4 className='single__title'>{name}</h4>
-      </Link>
-      <p className='single__price'>{price},00 RSD</p>
-      <Link to={`/products/${identifier}`} className='single__link'>
-        Dodajte u korpu <FiArrowUpRight className='single__link-icon' />
-      </Link>
-    </div>
+        <p className='single__price'>{price},00 RSD</p>
+        <p
+          onClick={() => navigate(`/product/${identifier}`)}
+          className='single__link'
+        >
+          Dodajte u korpu <FiArrowUpRight className='single__link-icon' />
+        </p>
+      </div>
+    </Link>
   )
 }
 

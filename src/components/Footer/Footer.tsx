@@ -56,9 +56,13 @@ const Footer = (): JSX.Element => {
           <Link to='/'>
             <FiFacebook className='footer__social' />
           </Link>
-          <Link to='/'>
+          <a
+            href='https://www.instagram.com/cactusobrenovac/?hl=en'
+            target='_blank'
+            rel='noreferrer'
+          >
             <FiInstagram className='footer__social' />
-          </Link>
+          </a>
         </div>
       </div>
       <div className='footer__down'>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import logoImage from '../../assets/logo.png'
 import { FiShoppingCart, FiUser, FiMenu, FiLogIn, FiX } from 'react-icons/fi'
 import { UserContext } from '../../context/UserContext'
+import { CartContext } from '../../context/CartContext'
 
 interface NavbarProps {
   alterNav: boolean
@@ -12,6 +13,8 @@ interface NavbarProps {
 
 const Navbar = ({ alterNav, setAlterNav }: NavbarProps): JSX.Element => {
   const { user } = useContext(UserContext)
+
+  const { cart } = useContext(CartContext)
 
   return (
     <header className='navbar'>
@@ -36,6 +39,11 @@ const Navbar = ({ alterNav, setAlterNav }: NavbarProps): JSX.Element => {
           <Link to='/contact' className='navbar__link'>
             Kontakt
           </Link>
+          {user?.email === 'vanja@gmail.com' && (
+            <Link to='/panel' className='navbar__link'>
+              Panel
+            </Link>
+          )}
         </nav>
       </div>
       <div className='navbar__right'>

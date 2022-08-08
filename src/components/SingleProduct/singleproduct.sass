@@ -1,0 +1,128 @@
+@import '../../styles/_variables'
+
+.single-product
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 5rem
+    position: relative
+    &__back
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -1
+        filter: grayscale(10)
+        opacity: .05
+    &__image-container
+        width: 500px
+        height: 500px
+        border-radius: $radius
+        position: relative
+        border: 1px solid lighten($off-black, 70%)
+        &::after
+            content: ''
+            position: absolute
+            top: 5%
+            left: -5%
+            width: 100%
+            height: 100%
+            z-index: -1
+            border: 3px solid $accent
+            border-radius: $radius
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: $radius
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__title
+        color: $accent
+    &__desc
+        display: flex
+        align-items: center
+        font-size: 1.5rem
+        font-weight: 500
+        opacity: .9
+        span
+            margin-left: .5rem
+    &__price
+        font-size: 1.3rem
+        font-weight: 700
+        margin-top: 1rem
+        color: $accent
+    &__form
+        margin-top: 2rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__select
+        width: 100%
+        height: 50px
+        border-radius: $radius
+        border: 1px solid $off-black
+        font-size: 1.2rem
+        padding: 0 .5rem
+        font-weight: 500
+        color: $off-black
+    &__quant-title
+        font-size: 1.2rem
+        font-weight: bold
+        margin-bottom: .5rem
+    &__quant
+        display: flex
+        align-items: center
+        gap: .3rem
+    &__quant-btn
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        outline: none
+        border: none
+        cursor: pointer
+        &:hover
+            .single-product__quant-icon
+                transform: scale(1.03)
+                color: $accent
+        &:active
+            .single-product__quant-icon
+                transform: scale(.9)
+    &__quant-icon
+        font-size: 2rem
+        color: lighten($off-black, 20%)
+        transition: all .2s ease-in-out
+    &__input
+        width: 70px
+        height: 30px
+        border-radius: $radius
+        border: 2px solid lighten($off-black, 20%)
+        outline: none
+        font-size: 1.2rem
+        padding: 0 .5rem
+        font-weight: 500
+        color: $off-black
+        text-align: center
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
+        &:focus
+            border: 2px solid $accent
+    &__sub-btn
+        margin-top: 1rem
+        padding: 1rem 2rem
+        background-color: $off-black
+        border-radius: $radius
+        outline: none
+        border: none
+        color: $off-white
+        &:hover
+            background-color: $accent
+            cursor: pointer

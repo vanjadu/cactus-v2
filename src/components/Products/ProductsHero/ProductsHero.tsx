@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './productshero.sass'
-import shopImg from '../../../assets/home/gift.jpeg'
+import shopImg from '../../../assets/home/cactus_wrap.jpg'
 import { UserContext } from '../../../context/UserContext'
 
 const ProductsHero = () => {

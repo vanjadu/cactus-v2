@@ -5,8 +5,11 @@ import HomeCategory from '../components/Home/HomeCategory'
 import HomeUs from '../components/Home/HomeUs'
 import HomeSuprise from '../components/Home/HomeSuprise'
 import HomeItems from '../components/Home/HomeItems'
+import { TabTitle } from '../utils/NewTitle'
 
 const Home = (): JSX.Element => {
+  TabTitle('Cactus Gift Shop: Dobrodosli')
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

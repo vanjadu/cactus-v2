@@ -57,7 +57,7 @@ const ProfileHero = (): JSX.Element => {
       <div className='profile-hero__container'>
         <div className='profile-hero__text'>
           <p className='profile-hero__date'>
-            {`${dayName}, ${monthName} ${serialDate}.`}
+            {`${dayName}, ${monthName} ${serialDate}`}
           </p>
           <h1 className='profile-hero__title'>
             {welcomeMessage()}, {user?.displayName}

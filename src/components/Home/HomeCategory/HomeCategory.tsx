@@ -10,7 +10,7 @@ const Category = (): JSX.Element => {
   return (
     <section className='cat'>
       <h1 className='cat__title'>
-        {user?.displayName} Nudimo Vam sledecu selekciju
+        {user?.displayName} Nudimo Vam sledece kategorije
       </h1>
       <p className='cat__desc'>
         Trazite idealan poklon?

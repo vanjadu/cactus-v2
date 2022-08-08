@@ -131,7 +131,7 @@ const ProductsItems = () => {
                     .map((singleItem: any, i: number) => (
                       <SingleItem
                         key={i}
-                        link={singleItem.id}
+                        identifier={singleItem.id}
                         {...singleItem.data}
                       />
                     ))}

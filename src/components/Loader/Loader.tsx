@@ -9,7 +9,7 @@ interface Props {
 const Loader = ({ small }: Props): JSX.Element => {
   return (
     <div className={small ? 'loader small' : 'loader'}>
-      <TailSpin height='120' width='120' color='#FBFBFB' ariaLabel='loading' />
+      <TailSpin height='150' width='150' color='#94B49F' ariaLabel='loading' />
     </div>
   )
 }

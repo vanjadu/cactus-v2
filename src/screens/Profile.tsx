@@ -6,10 +6,13 @@ import Loader from '../components/Loader'
 import { motion } from 'framer-motion'
 import ErrorPage from '../components/ErrorPage'
 import ProfileHero from '../components/Profile/ProfileHero'
+import { TabTitle } from '../utils/NewTitle'
 
 const Profile = () => {
   const { user, setUser, loading, setLoading } = useContext(UserContext)
   const navigate = useNavigate()
+
+  TabTitle(`Cactus Gift Shop: ${user?.displayName}`)
 
   const logoutHandler = () => {
     setLoading(true)
