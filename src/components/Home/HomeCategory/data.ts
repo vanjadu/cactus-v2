@@ -1,6 +1,6 @@
 const categories = [
   {
-    name: 'Solje',
+    name: 'šolje',
     desc: 'Lorem ipsum dolor sit amet consectetur.',
   },
   {

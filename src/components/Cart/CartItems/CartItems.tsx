@@ -4,40 +4,31 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../../../context/CartContext'
 
 const CartItems = (): JSX.Element => {
-  const { cart, bill } = useContext(CartContext)
+  const { cart, total } = useContext(CartContext)
 
   return (
     <section className='citems'>
       <div className='citems__container'>
-        <h1 className='citems__title'>
-          {cart.length ? 'Dodati artikli' : 'Korpa je prazna'}
-        </h1>
+        <h1 className='citems__title'>Dodati artikli</h1>
         <p className='citems__desc'>
-          {cart.length
-            ? 'Dodatne informacije o narucivanju artikala mozete videti na dnu stranice.'
-            : 'Da biste dodali artikle u korpu, kliknite na dugme "Dodaj u korpu" ispod slike artikla.'}
+          Dodatne informacije o narucivanju artikala mozete videti na dnu
+          stranice.
         </p>
         <ul className='citems__items'>
-          {cart.length
-            ? cart.map((item: any, i: any) => (
-                <li key={i} className='citems__card'>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className='citems__img'
-                  />
-                  <a href={`/products/${item.id}`} className='citems__name'>
-                    {item.name}
-                  </a>
-                  <p className='citems__quant'>
-                    Količina: <span>{item.sum}</span>
-                  </p>
-                  <p className='citems__price'>{item.price},00 RSD</p>
-                </li>
-              ))
-            : null}
+          {cart?.map((item: any, i: any) => (
+            <li key={i} className='citems__card'>
+              <img src={item.image} alt={item.name} className='citems__img' />
+              <Link to={`/products/${item.id}`} className='citems__name'>
+                {item.name}
+              </Link>
+              <p className='citems__quant'>
+                Količina: <span>{item.quant}</span>
+              </p>
+              <p className='citems__price'>{item.price},00 RSD</p>
+            </li>
+          ))}
         </ul>
-        <p>{bill}</p>
+        <p>{total}</p>
       </div>
     </section>
   )

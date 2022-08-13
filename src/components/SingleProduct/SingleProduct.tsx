@@ -47,33 +47,40 @@ const Product = (): JSX.Element => {
   }, [id])
 
   // to cart logic
-  const { addToCart } = useContext(CartContext)
+  // const { addToCart } = useContext(CartContext)
 
-  const [sum, setSum] = useState<number>(1)
+  const [quant, setQuant] = useState<number>(1)
 
-  const newCart = {
+  const newItem = {
     id: item?.id,
     name: item?.data.name,
-    sum,
     image: item?.data.image,
     price: item?.data.price,
+    quant,
   }
 
-  const increaseHandler = () => setSum((sum) => sum + 1)
-  const decreaseHandler = () => sum > 1 && setSum((sum) => sum - 1)
+  const increaseQuant = () => {
+    setQuant(quant + 1)
+  }
 
-  const onChangeHandler = (e: { target: { value: string } }) => {
+  const decreaseQuant = () => {
+    if (quant > 1) {
+      setQuant(quant - 1)
+    }
+  }
+
+  const onQuantChange = (e: { target: { value: string } }) => {
     const value: number = parseInt(e.target.value)
 
-    if (value === 0) {
-      return setSum(value + 1)
+    if (value < 1) {
+      setQuant(1)
+    } else {
+      setQuant(value)
     }
-
-    setSum(value)
   }
 
-  const addToCartHandler = (): void => {
-    addToCart(newCart)
+  const toCartHandler = () => {
+    // addToCart(newItem)
     navigate('/cart')
   }
 
@@ -105,27 +112,26 @@ const Product = (): JSX.Element => {
                 <p className='single-product__quant-title'>Kolicina:</p>
                 <div className='single-product__quant'>
                   <button
-                    onClick={decreaseHandler}
+                    onClick={decreaseQuant}
                     className='single-product__quant-btn'
                   >
                     <FiMinusSquare className='single-product__quant-icon' />
                   </button>
                   <input
                     type='number'
-                    min='1'
-                    value={sum}
-                    onChange={onChangeHandler}
+                    value={quant}
+                    onChange={onQuantChange}
                     className='single-product__input'
                   />
                   <button
-                    onClick={increaseHandler}
+                    onClick={increaseQuant}
                     className='single-product__quant-btn'
                   >
                     <FiPlusSquare className='single-product__quant-icon' />
                   </button>
                 </div>
                 <button
-                  onClick={addToCartHandler}
+                  onClick={toCartHandler}
                   className='single-product__sub-btn'
                 >
                   Dodajte u korpu
