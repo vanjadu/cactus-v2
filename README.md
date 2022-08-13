@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Cactus Gift Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React & Firebase application for a Gift Shop.
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@vanjadulikravic](https://www.instagram.com/dulikravicvanja/)
 
-### `npm start`
+## Badges
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Add badges from somewhere like: [shields.io](https://shields.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-### `npm test`
+## Color Reference
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Color        | Hex                                                              |
+| ------------ | ---------------------------------------------------------------- |
+| Off Black    | ![#2C3333](https://via.placeholder.com/10/2C3333?text=+) #2C3333 |
+| Off White    | ![#fafafa](https://via.placeholder.com/10/fafafa?text=+) #fafafa |
+| Accent Color | ![#94B49F](https://via.placeholder.com/10/94B49F?text=+) #94B49F |
 
-### `npm run build`
+## Appendix
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Any additional information goes here
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project, you will need to add the following Firebase environment variables to your .env file
 
-### `npm run eject`
+`API_KEY`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`AUTH_DOMAIN`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`AUTH_DOMAIN`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`ROJECT_ID`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`STORAGE_BUCKET`
 
-## Learn More
+`MESSAGING_SENDER_ID`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`APP_ID`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`MEASUREMENT_ID`
+
+## Features
+
+- Login / Auth system
+- Shopping Cart
+- Mobile browsing speed
+- Browser support
+
+## Installation
+
+Install my-project with npm
+
+```bash
+    npm i
+```
+
+![Logo](https://i.postimg.cc/bvg1VQMk/logo.png)
+
+## Screenshots
+
+![App Screenshot](https://i.postimg.cc/23NqS6MC/Screenshot-2022-08-11-at-13-40-44.png)
